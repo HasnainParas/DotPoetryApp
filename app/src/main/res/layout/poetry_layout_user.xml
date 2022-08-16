@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_layout_appcolor"
+    android:elevation="10dp">
+
+
+    <TextView
+        android:id="@+id/shayari_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shayari_tv_style"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:padding="20dp"
+        android:singleLine="false"
+        android:text="Wahan Bhi Teri Hee Arzoo Hogi,
+Jahan Suna Hai Bahut C Hoorein Hoti Hain"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/copy_Btn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/unFav_Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shayari_tv"
+        app:srcCompat="@drawable/ic_copy"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/copyanim"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/copy_Btn"
+        app:layout_constraintEnd_toEndOf="@+id/copy_Btn"
+        app:layout_constraintStart_toStartOf="@+id/copy_Btn"
+        app:layout_constraintTop_toTopOf="@+id/copy_Btn"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/copy" />
+
+    <ImageView
+        android:id="@+id/unFav_Btn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/copy_Btn"
+        app:layout_constraintEnd_toStartOf="@+id/poetry_ShareBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/copy_Btn"
+        app:layout_constraintTop_toTopOf="@+id/copy_Btn"
+        app:srcCompat="@drawable/ic_unfavborder"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/favanim"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/unFav_Btn"
+        app:layout_constraintEnd_toEndOf="@+id/unFav_Btn"
+        app:layout_constraintStart_toStartOf="@+id/unFav_Btn"
+        app:layout_constraintTop_toTopOf="@+id/unFav_Btn"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/favheart" />
+
+    <ImageView
+        android:id="@+id/poetry_ShareBtn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/unFav_Btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/unFav_Btn"
+        app:layout_constraintTop_toTopOf="@+id/unFav_Btn"
+        app:srcCompat="@drawable/ic_share" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

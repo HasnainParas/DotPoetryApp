@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/home1"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/favourite1"
+            android:icon="@drawable/ic_favorite"
+            android:title="Favourite" />
+    </group>
+    <item android:title="POETRY">
+        <menu>
+            <item
+                android:id="@+id/poets"
+                android:icon="@drawable/ic_person"
+                android:title="Poets" />
+            <item
+                android:id="@+id/shayari"
+                android:icon="@drawable/ic_shayari"
+                android:title="Shayari" />
+
+
+        </menu>
+
+    </item>
+    <item android:title="MORE">
+        <menu>
+            <item
+                android:id="@+id/image_shayari"
+                android:icon="@drawable/ic_image"
+                android:title="Image Shayari" />
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_setting"
+                android:title="Settings" />
+            <item
+                android:id="@+id/log_out"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_layout_appcolor">
+
+
+    <TextView
+        android:id="@+id/favshayaritvv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shayari_tv_style"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:padding="20dp"
+        android:singleLine="false"
+        android:text="Wahan Bhi Teri Hee Arzoo Hogi,
+Jahan Suna Hai Bahut C Hoorein Hoti Hain"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/favcopybtn"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favshayaritvv"
+        app:srcCompat="@drawable/ic_copy" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationcopy"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/animationfav"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favshayaritvv"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/copy"
+        />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/favcopybtn"
+        app:layout_constraintTop_toBottomOf="@+id/favshayaritvv"
+        app:srcCompat="@drawable/ic_unfavborder" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationfav"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/animationcopy"
+        app:layout_constraintTop_toBottomOf="@+id/favshayaritvv"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/heartbreak"
+        />
+
+    <TextView
+        android:id="@+id/unlike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unfavourite"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/favshayaritvv"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

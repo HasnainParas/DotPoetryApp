@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="156dp"
+    android:maxWidth="120dp"
+    android:maxHeight="200dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/ripple_effect"
+    android:elevation="20dp"
+    android:padding="5dp"
+    android:id="@+id/poetLayout"
+    >
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_marginStart="5dp"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_marginEnd="5dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:background="@drawable/ripple_effect"-->
+    <!--        android:elevation="10dp"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/poet_image"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_margin="3dp"
+        android:src="@drawable/mirza_ghalib"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/poetNAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:maxLength="100"
+        android:maxLines="2"
+        android:padding="5dp"
+        android:maxWidth="150dp"
+        android:maxHeight="200dp"
+        android:maxEms="15"
+        android:minWidth="100dp"
+        android:text=" dfdfdfdf dfdffre"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poet_image" />
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            android:background="@drawable/ripple_effect"-->
+    <!--            android:elevation="6dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="@+id/poet_name"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/poet_name"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/poet_name">-->
+
+    <TextView
+        android:id="@+id/poet_Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="1797"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poetNAME" />
+
+    <View
+        android:id="@+id/textView3"
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/poet_Age"
+        app:layout_constraintEnd_toStartOf="@+id/poet_age_end"
+        app:layout_constraintStart_toEndOf="@+id/poet_Age"
+        app:layout_constraintTop_toTopOf="@+id/poet_Age" />
+
+    <TextView
+        android:id="@+id/poet_age_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="1797"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/poet_Age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/poet_Age" />
+    <!--        </LinearLayout>-->
+
+    <!--    </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

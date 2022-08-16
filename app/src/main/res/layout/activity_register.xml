@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/signUpImg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/useravatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/edit_border"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingTop="12dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpImg" />
+
+        <EditText
+            android:id="@+id/passwordBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_border"
+            android:ems="10"
+            android:hint="Password"
+
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/emailBox"
+            app:layout_constraintStart_toStartOf="@+id/emailBox"
+            app:layout_constraintTop_toBottomOf="@+id/emailBox"
+            app:passwordToggleEnabled="true"
+
+            />
+
+
+        <EditText
+            android:id="@+id/passwordBox2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_border"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/emailBox"
+            app:layout_constraintStart_toStartOf="@+id/emailBox"
+            app:layout_constraintTop_toBottomOf="@+id/passwordBox"
+            app:passwordToggleEnabled="true" />
+
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/passwordBox"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/edit_border"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="Password"-->
+    <!--        app:passwordToggleEnabled="true"-->
+    <!--        android:inputType="textPassword"-->
+    <!--        android:paddingLeft="10dp"-->
+    <!--        android:paddingTop="12dp"-->
+    <!--        android:paddingRight="6dp"-->
+    <!--        android:paddingBottom="12dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/emailBox"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/emailBox"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/emailBox"-->
+    <!--        -->
+    <!--        -->
+    <!--        />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/passwordBox2"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/edit_border"-->
+    <!--        android:ems="10"-->
+    <!--        app:passwordToggleEnabled="true"-->
+    <!--        android:hint="Confirm Password"-->
+    <!--        android:inputType="textPassword"-->
+    <!--        android:paddingLeft="10dp"-->
+    <!--        android:paddingTop="12dp"-->
+    <!--        android:paddingRight="6dp"-->
+    <!--        android:paddingBottom="12dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/emailBox"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/emailBox"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/passwordBox"-->
+    <!--        -->
+    <!--        -->
+    <!--        />-->
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/appColor"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/passwordBox2"
+        app:layout_constraintStart_toStartOf="@+id/passwordBox2"
+        app:layout_constraintTop_toBottomOf="@+id/passwordBox2" />
+
+    <Button
+        android:id="@+id/logInBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/appColor"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Log In"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/signUpBtn"
+        app:layout_constraintStart_toStartOf="@+id/signUpBtn"
+        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

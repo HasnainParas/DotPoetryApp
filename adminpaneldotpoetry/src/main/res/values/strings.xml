@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Admin Panel DotPoetry</string>
+    <string name="submit_btn">Submit</string>
+    <string name="splashText">Admin Panel</string>
+    <string name="add_poet">Add Poets</string>
+
+</resources>

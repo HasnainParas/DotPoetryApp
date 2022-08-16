@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/offlineLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appColor"
+        android:visibility="invisible">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/no_internet_Lottie"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/nointernetconnection" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/aclonica"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/no_internet_txt"
+            android:textAlignment="center"
+            android:textColor="#E4DFDF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/no_internet_Lottie"
+            app:layout_constraintStart_toStartOf="@+id/no_internet_Lottie"
+            app:layout_constraintTop_toBottomOf="@+id/no_internet_Lottie" />
+
+        <Button
+            android:id="@+id/try_Again_btn"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/black"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="Try Again"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conStraintLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+        <!--        <me.ibrahimsn.lib.SmoothBottomBar-->
+        <!--        android:id="@+id/bottomNav"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="70dp"-->
+        <!--        app:backgroundColor="@color/appColor"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:menu="@menu/tabs" />-->
+
+        <!--        <com.iammert.library.readablebottombar.ReadableBottomBar-->
+        <!--            android:id="@+id/bottomNav"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:rbb_activeItemType="text"-->
+        <!--            app:rbb_indicatorColor="@color/appColor"-->
+        <!--            app:rbb_tabs="@xml/tabs"-->
+        <!--            app:rbb_textColor="@color/black" />-->
+
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/adView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </FrameLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:itemRippleColor="@color/appColor"
+            app:itemTextColor="@color/black"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/tabs">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:itemTextAppearance="?attr/textAppearanceDisplayMedium"
+        app:menu="@menu/navigation_drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

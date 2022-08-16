@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/appColor"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Update Poet"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/upCircleImage"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"
+        android:src="@drawable/persongroup"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <EditText
+        android:id="@+id/updatepoetname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/edit_border"
+        android:elevation="20dp"
+        android:ems="10"
+        android:editable="false"
+        android:hint="Poeter Name"
+        android:minHeight="60dp"
+        android:minLines="1"
+
+        android:paddingLeft="20dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/upCircleImage" />
+
+    <EditText
+        android:id="@+id/updatepoetAgeStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_border"
+        android:elevation="20dp"
+        android:ems="10"
+        android:hint="Age Start"
+        android:inputType="number|textPersonName"
+        android:minHeight="60dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/updatepoetname"
+        app:layout_constraintStart_toStartOf="@+id/updatepoetname"
+        app:layout_constraintTop_toBottomOf="@+id/updatepoetname" />
+
+    <EditText
+        android:id="@+id/updatepoetAgeEnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_border"
+        android:elevation="20dp"
+        android:ems="10"
+        android:hint="Age End"
+        android:inputType="number|textPersonName"
+        android:minHeight="60dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/updatepoetAgeStart"
+        app:layout_constraintStart_toStartOf="@+id/updatepoetAgeStart"
+        app:layout_constraintTop_toBottomOf="@+id/updatepoetAgeStart" />
+
+    <TextView
+        android:id="@+id/updatesubmitbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/ripple_effect_for_btn"
+        android:elevation="30dp"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="@string/submit_btn"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/updatepoetAgeEnd"
+        app:layout_constraintStart_toStartOf="@+id/updatepoetAgeEnd"
+        app:layout_constraintTop_toBottomOf="@+id/updatepoetAgeEnd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
